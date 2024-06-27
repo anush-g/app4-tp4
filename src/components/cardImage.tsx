@@ -15,7 +15,6 @@ const CardImage: React.FC<CardProps> = ({ url, onClick }) => {
     >
       <img
         src={url}
-        alt={`Image`}
         width={500}
         height={500}
         className="w-full h-full object-cover"

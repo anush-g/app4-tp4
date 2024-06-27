@@ -52,10 +52,8 @@ const CardProfile: React.FC<CardProps> = ({ profileId }) => {
                 {url ? (
                   <div className="relative w-48 h-48 overflow-hidden rounded-xl">
                     <img
-                      src={url} // Utiliza la URL obtenida y almacenada en el estado
-                      layout="fill"
-                      objectFit="cover"
-                      alt="Profile"
+                      src={url}             
+                      
                     />
                   </div>
                 ) : (
