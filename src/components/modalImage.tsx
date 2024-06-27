@@ -30,7 +30,7 @@ const ModalImage: React.FC<ModalProps> = ({ url, onClose }) => {
             />
           </svg>
         </button>
-        <Image
+        <img
           src={url}
           alt={`Image`}
           width={800}

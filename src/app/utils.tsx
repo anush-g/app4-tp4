@@ -105,7 +105,7 @@ export const getImagesUrlByProfile = async (
   profileId: number
 ): Promise<string[]> => {
   const images: Imagen[] = await getImagesIdByProfile(profileId);
-  return images.map((i) => `http://3.142.219.234/imagen/${i.id}`);
+  return images.map((i) => `${process.env.NEXT_PUBLIC_URL_API}/imagen/${i.id}`);
 };
 
 export const getLatestImageUrlByProfile = async (profileId: number): Promise<string> => {
