@@ -10,10 +10,10 @@ interface ModalProps {
 const ModalImage: React.FC<ModalProps> = ({ url, onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="relative overflow-hidden rounded-lg shadow-lg">
+      <div className="relative overflow-hidden rounded-lg shadow-lg max-h-[90vh]">
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 textgray-900 rounded-full p-2 focus:outline-none text-white bg-red-600 hover:bg-red-800"
+          className="absolute top-2 right-2 rounded-full p-2 focus:outline-none text-white bg-red-600 hover:bg-red-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,12 +30,15 @@ const ModalImage: React.FC<ModalProps> = ({ url, onClose }) => {
             />
           </svg>
         </button>
-        <img
-          src={url}
-          width={800}
-          height={800}
-          className="w-full h-full object-contain"
-        />
+        <div className="w-full h-full flex items-center justify-center">
+          <Image
+            src={url}
+            alt={`Image`}
+            width={800}
+            height={800}
+            className="max-w-full max-h-[90vh] object-contain"
+          />
+        </div>
       </div>
     </div>
   );
